@@ -1,2 +1,0 @@
-Link :
-https://h8-ks09-fp1-model-deployment.herokuapp.com/
