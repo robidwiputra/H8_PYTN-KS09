@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+    <title>Rain Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+  
+    </head>  
+    <body>
+ <div>
+    <h1>Rain Prediction</h1>
+
+    <form action="/predict" method="POST">
+        <div>
+            <p>Sunshine</p>
+            <input type="text" name="Sunshine" placeholder="Type Here" required>
+        </div>
+        
+        <div>
+            <p>Rainfall</p>
+            <input type="text" name="Rainfall" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>RainToday</p>
+            <input type="text" name="RainToday" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>WindGustSpeed</p>
+            <input type="text" name="WindGustSpeed" placeholder="Type Here" required>
+        </div>
+        <div>
+            <p>Cloud 9am</p>
+            <input type="text" name="Cloud9am" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>Cloud 3pm</p>
+            <input type="text" name="Cloud3pm" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>Humidity at 9am</p>
+            <input type="text" name="Humidity9am" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>Humidity at 3pm</p>
+            <input type="text" name="Humidity3pm" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>Pressure at 9am</p>
+            <input type="text" name="Pressure9am" placeholder="Type Here" required>
+        </div>
+
+        <div>
+            <p>Temp at 3pm</p>
+            <input type="text" name="Temp3pm" placeholder="Type Here" required>
+        </div>
+
+        <input type="submit" value="Predict">
+    </form>
+     
+             <h2>Predicted: {{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
+
