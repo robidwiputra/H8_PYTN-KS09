@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background: #F19023;
+    font-family: "Montserrat";
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 420px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container input[type=number], .container select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.container button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #F19023;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.container button:hover, .container button:active, .container button:focus {
+    background: #C5761C;
+}
+
+.container .message {
+    margin: 15px 0 0;
+    color: #B3B3B3;
+    font-size: 16px;
+}
+
+form > label, .container p {
+    font-weight: 500;
+    font-size: 12px;
+} 
+
+.default {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+.h2 {
+    font-size: medium !important;
+    font-weight: 700 !important;
+}

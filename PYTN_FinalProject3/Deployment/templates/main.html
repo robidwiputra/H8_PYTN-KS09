@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Heart Attack Prediction</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Heart Attack Prediction</h1>
+            <form action="{{ url_for('predict') }}" method="post">
+                <p class="h2">Your Data:</p>
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="0" required="required" min="1" max="150"/>
+
+                <label for="ejection_fraction">Heart Ejection Fraction (%)</label>
+                <input type="number" name="ejection_fraction" id="ejection_fraction" placeholder="0" required="required" min="0" max="100"/>
+
+                <label for="serum_creatinine">Serum Creatinine Level (mg/dL)</label>
+                <input type="number" name="serum_creatinine" id="serum_creatinine" placeholder="0" required="required" min="1"/>
+
+                <label for="time">Days Have Been Follow-up</label>
+                <input type="number" name="time" id="time" placeholder="0" required="required" min="0"/>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <p class="message">{{ prediction_text }}</p>
+        </div>
+        <div class="container">
+            <p>Made By</p>
+            <p class="default">PYTN-KS09-003 - Johnson Rouslie Junior</p>
+            <p class="default">PYTN-KS09-022 - Nafiatul Risa</p>
+            <p class="default">PYTN-KS09-024 - Robi Dwiputra Satria</p>
+        </div>
+    </body>
+</html>
