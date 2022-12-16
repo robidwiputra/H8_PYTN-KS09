@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Segmentation Prediction</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Credit Card Customer Segmentation</h1>
+            <form action="{{ url_for('predict') }}" method="post">
+                <p class="h2">Your Data:</p>
+                <label for="BALANCE">Balance</label>
+                <input type="number" name="BALANCE" id="BALANCE" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="BALANCE_FREQUENCY">Balance Frequency</label>
+                <input type="number" name="BALANCE_FREQUENCY" id="BALANCE_FREQUENCY" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="PURCHASES">Purchases</label>
+                <input type="number" name="PURCHASES" id="PURCHASES" placeholder="0" required="required" min="0" step="any">
+
+                <label for="ONEOFF_PURCHASES">Oneoff Purchases</label>
+                <input type="number" name="ONEOFF_PURCHASES" id="ONEOFF_PURCHASES" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="INSTALLMENTS_PURCHASES">Installments Purchases</label>
+                <input type="number" name="INSTALLMENTS_PURCHASES" id="INSTALLMENTS_PURCHASES" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="PURCHASES_FREQUENCY">Purchases Frequency</label>
+                <input type="number" name="PURCHASES_FREQUENCY" id="PURCHASES_FREQUENCY" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="ONEOFF_PURCHASES_FREQUENCY">Oneoff Purchases Frequency</label>
+                <input type="number" name="ONEOFF_PURCHASES_FREQUENCY" id="ONEOFF_PURCHASES_FREQUENCY" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="CASH_ADVANCE_FREQUENCY">Cash Advance Frequency</label>
+                <input type="number" name="CASH_ADVANCE_FREQUENCY" id="CASH_ADVANCE_FREQUENCY" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="CREDIT_LIMIT">Credit Limit</label>
+                <input type="number" name="CREDIT_LIMIT" id="CREDIT_LIMIT" placeholder="0" required="required" min="0" step="any"/>
+
+                <label for="PAYMENTS">Payments</label>
+                <input type="number" name="PAYMENTS" id="PAYMENTS" placeholder="0" required="required" min="0" step="any"/>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <p class="message">{{ prediction_text }}</p>
+        </div>
+        <div class="container">
+            <p>Made By</p>
+            <p class="default">PYTN-KS09-010 - Rizqi Meidianto Kresna Mukti</p>
+            <p class="default">PYTN-KS09-018 - Rizke Fridayati</p>
+            <p class="default">PYTN-KS09-024 - Robi Dwiputra Satria</p>
+        </div>
+    </body>
+</html>
